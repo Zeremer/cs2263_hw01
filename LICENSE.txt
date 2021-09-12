@@ -1,22 +1,4 @@
-# cs2263_hw01
-
-## Description
-
-#### Table of Contents
-
-### Installation
-
-
-### Usage
-
-
-### Contributing
-
-#### Credits
-Author: Hunter Chase
-
-
-#### MIT License
+MIT License
 
 Copyright (c) 2021 Hunter Chase
 
