@@ -4,15 +4,27 @@
 package edu.isu.cs2263.hw01;
 
 
+// Classes
 
+
+//Funtions
+
+
+// Main
     public static void main(String[] args) {
 
     // create Options object
-Options options = new Options();
+    Options options = new Options();
+    // add options
+    options.addOption("t", false, "display current time");
+    options.addOption(new Option("b", "batch", true, "processes the provided file rather than standard input"));
+    options.addOption(new Option("h", "help", false, "prints help/usage message"));
+    options.addOption(new Option("o", "output", true, "sends the output to the provided file and standard output"));
 
-    // add t option
-options.addOption("t", false, "display current time");
 
-
+    // Create parser
+    CommandLineParser parser = new DefaultParser();
+    // Create parse
+    CommandLine cmd = parser.parse( options, args);
     }
 }
