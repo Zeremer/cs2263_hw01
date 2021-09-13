@@ -1,44 +1,4 @@
-# cs2263_hw01
-*version 1.0.1*
-
-## Description
-This program currently uses Apache CLI to bring files into and process them into another file.
-Currently this is only a bare bones project and does not have working functionality.
-
-
-#### Table of Contents
-- CS2263_HW01
- - Description
-  - Table of Contents
- - Installation
- - Usage
- - Contributing
-  - Credits
-  - Licensing
-
-
-### Installation
-- I only seem to be able to run this program using gradle.
-
-### Usage
-- Run this program though gradle.
-- Arguments can be used to specify a source file to bring in data or send data to.
-  - To bring in data "-b <path/text.txt>".
-  - To send data out "-o <path/text.txt>".
-- The Argument "-h" can be used to show the usage information.
-
-
-### Contributing
-
-
-#### Credits
-- Author: Hunter Chase
- - Contact info
-  - Email - hchase333@gmail.com / chashunt@isu.edu
-  - Phone - 208-206-1454
-
-
-#### MIT License
+MIT License
 
 Copyright (c) 2021 Hunter Chase
 
