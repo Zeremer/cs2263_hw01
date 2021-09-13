@@ -7,24 +7,54 @@ package edu.isu.cs2263.hw01;
 // Classes
 
 
-//Funtions
+//Functions
 
 
 // Main
-    public static void main(String[] args) {
-
-    // create Options object
-    Options options = new Options();
-    // add options
-    options.addOption("t", false, "display current time");
-    options.addOption(new Option("b", "batch", true, "processes the provided file rather than standard input"));
-    options.addOption(new Option("h", "help", false, "prints help/usage message"));
-    options.addOption(new Option("o", "output", true, "sends the output to the provided file and standard output"));
 
 
-    // Create parser
-    CommandLineParser parser = new DefaultParser();
-    // Create parse
-    CommandLine cmd = parser.parse( options, args);
+import org.apache.commons.cli.*;
+
+public class App {
+    public static void main(String[] args) throws ParseException {
+
+        //***Definition Stage***
+        // create Options object
+        Options options = new Options();
+        // add options
+        options.addOption("t", false, "display current time");
+        options.addOption(new Option("b", "batch", true, "processes the provided file rather than standard input"));
+        options.addOption(new Option("h", "help", false, "prints help/usage message"));
+        options.addOption(new Option("o", "output", true, "sends the output to the provided file and standard output"));
+
+        //***Parsing Stage***
+        //Create a parser
+        CommandLineParser parser = new DefaultParser();
+        CommandLine cmd = parser.parse(options, args);
+
+        //***Interrogation Stage***
+        if(cmd.hasOption("h")){
+            System.out.println("usage: eval [OPTIONS]\n" +
+                    "Evaluate simple mathematical expressions\n" +
+                    "\n" +
+                    "-b,--batch <file>    batch file with expressions to evaluate\n" +
+                    "-h,--help            print usage message\n" +
+                    "-o,--output <file>   output to this file\n" +
+                    "\n" +
+                    "Copyright (C) 2021 Hunter Chase");
+                    System.exit(0);
+        }
+        if(cmd.hasOption("t")){
+            System.out.println("The time is " + System.nanoTime());
+        }
+        if(cmd.hasOption("b")){
+            String bfile = new String(String.valueOf(args));
+                    System.out.println("batch value:" + bfile);
+        }
+        if(cmd.hasOption("o")){
+            String ofile = new String(String.valueOf(args));
+            System.out.println("Output value:" + ofile);
+        }
+
     }
 }
