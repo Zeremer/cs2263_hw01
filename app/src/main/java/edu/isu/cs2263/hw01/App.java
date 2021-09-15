@@ -3,20 +3,18 @@
  */
 package edu.isu.cs2263.hw01;
 
-
-// Classes
-
-
-//Functions
-
-
-// Main
-
-
 import org.apache.commons.cli.*;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class App {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException, FileNotFoundException {
+
+        //Variables for later
+        String exp = "";
+        Boolean stnd;
 
         //***Definition Stage***
         // create Options object
@@ -43,16 +41,47 @@ public class App {
                     "Copyright (C) 2021 Hunter Chase");
             System.exit(0);
         }
-        if (cmd.hasOption("b")) {
+        StdIn getExp = new StdIn(); // New Standard in object
+        BatIn whole_batch = new BatIn(); // New Batch in object
+        if (cmd.hasOption("b")) { // If there is a batch file
             String ifile = cmd.getOptionValue("b");
             System.out.println("batch value: " + ifile);
-        }
-        if (cmd.hasOption("o")) {
-            String ofile = cmd.getOptionValue("o");
-            System.out.println("Output value: " + ofile);
+            try{
+                whole_batch.in(ifile); // Throw contents into batch object
+            } catch (FileNotFoundException e) {
+                System.out.println("no file found. \nexiting...");
+                System.exit(0);
             }
-            // Test Zone
-            System.out.println("made it to print");
+
+        }
+        else {
+            getExp.in();
+            exp = getExp.out();
+        }
+            if (cmd.hasOption("o")) {
+                String ofile = cmd.getOptionValue("o");
+                System.out.println("Output value: " + ofile);
+            }
+
+            //Evaluations
+            Eval maths = new Eval();
+            if (cmd.hasOption("b")) {
+                while (whole_batch.check()) {
+                    String next = whole_batch.out();
+                    System.out.println(next);
+                    Integer out_val = maths.eval(next);
+                    System.out.println(out_val);
+                }
+            }
+            else {
+                while (!getExp.done()) {
+                    Integer out_val = maths.eval(exp);
+                    System.out.println(out_val);
+                    getExp.in();
+                    exp = getExp.out();
+                }
+            }
+        // Test Zone
+        System.out.println("\nThank you\nHave a nice day");
         }
     }
-
