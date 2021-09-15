@@ -7,7 +7,7 @@ import java.io.File;
 public class BatIn implements Input {
 
     // Variables
-    String[] exp;
+    String[] exp = new String[20];
     File file;
     Scanner sc;
     Integer i = 0;
@@ -18,9 +18,6 @@ public class BatIn implements Input {
         // pass the path to the file as a parameter
         file = new File(in_file);
         sc = new Scanner(file);
-        while (sc.hasNextLine())
-            exp[i] = sc.nextLine();
-        i++;
     }
 
       public String out(){

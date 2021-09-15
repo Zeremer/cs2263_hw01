@@ -49,12 +49,6 @@ public class App {
             try{
                 whole_batch.in(ifile); // Throw contents into batch object
             } catch (FileNotFoundException e) {
-                File file;
-                Scanner ask = new Scanner(System.in);
-                System.out.println("File was not found. \nYou can try to add it again here once - ");
-                ifile = ask.nextLine();
-                whole_batch.in(ifile);
-            } finally {
                 System.out.println("no file found. \nexiting...");
                 System.exit(0);
             }
@@ -88,6 +82,6 @@ public class App {
                 }
             }
         // Test Zone
-        System.out.println("made it to end");
+        System.out.println("\nThank you\nHave a nice day");
         }
     }

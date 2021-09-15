@@ -2,16 +2,16 @@ package edu.isu.cs2263.hw01;
 
 public class Eval {
     public int eval(String str) {
-        int tot = 0;
-        boolean initial = true;
-        int i = -1;
-        int digit;
-        int op = 0;
-        char chr;
-        String digi = "";
-        while (++i < str.length()) {
-            System.out.println("inc");
-            chr = str.charAt(i);
+        int tot = 0; // Total count
+        boolean initial = true; // Is this the first run though
+        int i = -1; // Start of increment
+        int digit; // Number built from loops
+        int op = 0; // Operation to be used
+        char chr; // Character grabbed each loop
+        String digi = ""; // We dont start with a character
+        while (++i < str.length()) { // While there are character in the string, loop
+//            System.out.println("inc"); // Test to see how many times the program loops
+            chr = str.charAt(i); // Grab a character every loop
             if (chr == ' ') { // Check if blank
             } //Character was whitespace. Loop back.
             //operators
@@ -23,10 +23,10 @@ public class Eval {
                 op = 3;
             } else if (chr == '/') {
                 op = 4;
-            } else {
-                digi += chr;
-                digit = Integer.parseInt(digi);
-                if (initial){
+            } else { // Math section
+                digi += chr; // store character
+                digit = Integer.parseInt(digi); // parse for a digit
+                if (initial){ // first digit should be added to avoid dividing zero by a number
                     tot = digit;
                     initial = false;
                 } else if (op == 1) {
@@ -42,7 +42,7 @@ public class Eval {
                     else{}
                     tot = tot / digit;
                 } else {op = 5;} //Do nothing if no op
-                digi = "";
+                digi = ""; // reset variables
                 op = 0;
             }
 
