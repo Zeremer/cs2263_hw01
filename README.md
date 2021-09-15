@@ -9,13 +9,13 @@ or running the program without commands will allow one to enter a mathematical e
 
 #### Table of Contents
 - CS2263_HW01
- - Description
-  - Table of Contents
- - Installation
- - Usage
- - Contributing
-  - Credits
-  - Licensing
+  - Description
+    - Table of Contents
+  - Installation
+  - Usage
+  - Contributing
+    - Credits
+    - Licensing
 
 
 ### Installation
