@@ -7,7 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
--Evaluations
+-Batch output
+
+
+
+## [1.1.0] - 9-15-2021
+### Added
+-Program can now do single digit evaluations with input
+ -Can bring in batch files and perform evaluations on them
+
+
+### Changed
+-Documentation updated
+
+
+### Removed
 
 
 
@@ -40,5 +54,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/Zeremer/cs2263_hw01.git...Head
+[1.1.0]: https://github.com/Zeremer/cs2263_hw01.git...v1.0.1
 [1.0.1]: https://github.com/Zeremer/cs2263_hw01.git...v1.0.1
 [1.0.0]: https://github.com/Zeremer/cs2263_hw01.git...v1.0.0

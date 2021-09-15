@@ -1,9 +1,10 @@
 # cs2263_hw01
-*version 1.0.1*
+*version 1.1.0*
 
 ## Description
-This program currently uses Apache CLI to bring files into and process them into another file.
-Currently this is only a bare bones project and does not have working functionality.
+This program is used to compute single digit mathematical expressions and give an answer.
+This program can use Apache CLI to bring files with console commands,
+or running the program without commands will allow one to enter a mathematical expression.
 
 
 #### Table of Contents
@@ -20,8 +21,12 @@ Currently this is only a bare bones project and does not have working functional
 ### Installation
 - I only seem to be able to run this program using gradle.
 
+
 ### Usage
 - Run this program though gradle.
+  - Go to the directory of the project in cmd.
+  - Command is <gradle run>
+  - Additional comments must placed in <--args="<commands>">.
 - Arguments can be used to specify a source file to bring in data or send data to.
   - To bring in data "-b <path/text.txt>".
   - To send data out "-o <path/text.txt>".
@@ -29,6 +34,7 @@ Currently this is only a bare bones project and does not have working functional
 
 
 ### Contributing
+This project is not currently accepting any external contributors.
 
 
 #### Credits
