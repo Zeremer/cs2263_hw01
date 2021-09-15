@@ -1,5 +1,5 @@
 # cs2263_hw01
-*version 1.1.1*
+*version 1.1.0*
 
 ## Description
 This program is used to compute single digit mathematical expressions and give an answer.

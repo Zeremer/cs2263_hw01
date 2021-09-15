@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-## [1.1.1] - 9-15-2021
+## [1.1.0] - 9-15-2021
 ### Added
 -Program can now do single digit evaluations with input
  -Can bring in batch files and perform evaluations on them
