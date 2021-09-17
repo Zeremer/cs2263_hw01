@@ -36,4 +36,7 @@ public class BatIn implements Input {
         }
         else {return false;}
     }
+    public void close(){
+        sc.close();
+    }
 }

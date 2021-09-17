@@ -2,13 +2,15 @@ package edu.isu.cs2263.hw01;
 
 import java.util.Scanner;
 
+
 public class StdIn implements Input{
         // Variables
         String exp;
+        Scanner keyed = new Scanner(System.in);
+
 
         //Methods
         public void in(){
-            Scanner keyed = new Scanner(System.in);
                 System.out.println("Please insert the expression you would like to compute - ");
                 exp = keyed.nextLine();
             }
@@ -22,5 +24,11 @@ public class StdIn implements Input{
             else {
                 return false;
             }
+        }
+        public void close(){
+            keyed.close();
+        }
+        public void passIn(String pass){
+            exp = pass;
         }
         }

@@ -7,7 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
--Batch output
+-No more plans scheduled
+
+
+
+## [1.2.0] - 9-16-2021
+### Added
+-Program can now output to a specific file
+
+
+### Changed
+-Documentation updated
+
+
+### Removed
 
 
 
@@ -54,6 +67,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 [Unreleased]: https://github.com/Zeremer/cs2263_hw01.git...Head
-[1.1.0]: https://github.com/Zeremer/cs2263_hw01.git...v1.0.1
+[1.2.0]: https://github.com/Zeremer/cs2263_hw01.git...v1.2.0
+[1.1.0]: https://github.com/Zeremer/cs2263_hw01.git...v1.1.0
 [1.0.1]: https://github.com/Zeremer/cs2263_hw01.git...v1.0.1
 [1.0.0]: https://github.com/Zeremer/cs2263_hw01.git...v1.0.0
