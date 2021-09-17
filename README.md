@@ -4,7 +4,7 @@
 ## Description
 This program is used to compute single digit mathematical expressions and give an answer.
 This program can use Apache CLI to bring files with console commands,
-or running the program without commands will allow one to enter a mathematical expression.
+or running the program without commands will allow one to enter a mathematical expression. Then the program can take a command to output calculations to a specific file.
 
 
 #### Table of Contents
